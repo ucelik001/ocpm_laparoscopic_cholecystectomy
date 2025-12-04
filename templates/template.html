@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>OCDFG</title>
+<script src="https://cdn.jsdelivr.net/npm/viz.js@2.1.2/viz.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/viz.js@2.1.2/full.render.js"></script>
+</head>
+
+<body>
+<div id="container"></div>
+
+<script>
+    let gv = `
+REPLACE_WITH_DOT_CODE
+    `;
+
+    let viz = new Viz();
+
+    viz.renderSVGElement(gv)
+        .then(function(svg) {
+            document.getElementById("container").appendChild(svg);
+
+            // PNG converter
+            let xml = new XMLSerializer().serializeToString(svg);
+            let svg64 = btoa(xml);
+            let img = new Image();
+
+            img.onload = function () {
+                let canvas = document.createElement("canvas");
+                canvas.width = img.width;
+                canvas.height = img.height;
+                let ctx = canvas.getContext("2d");
+                ctx.drawImage(img, 0, 0);
+
+                let pngUrl = canvas.toDataURL("image/png");
+
+                let link = document.createElement("a");
+                link.download = "ocdfg.png";
+                link.href = pngUrl;
+                link.innerText = "Download PNG";
+                link.style = "display:block; margin:20px auto; font-size:22px;";
+                document.body.appendChild(link);
+            };
+
+            img.src = "data:image/svg+xml;base64," + svg64;
+        })
+        .catch(err => console.error(err));
+</script>
+
+</body>
+</html>

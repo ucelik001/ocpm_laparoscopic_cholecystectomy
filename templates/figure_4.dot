@@ -1,0 +1,314 @@
+digraph SurgicalProcessVariants {
+    // Modern graph settings
+    graph [
+        rankdir=LR,
+        splines=true,
+        ranksep=0.5,
+        nodesep=0.3,
+        bgcolor="white",
+        fontname="Arial",
+        pad=0.0,
+        dpi=600
+    ];
+
+    node [
+        style="filled,rounded",
+        width=1.2,
+        height=0.6,
+        shape=box,
+        penwidth=1.5,
+        margin=0.12,
+        fontname="Arial"
+    ];
+
+    edge [
+        fontname="Arial",
+        fontsize=10,
+        arrowsize=2,
+        penwidth=5
+    ];
+
+    // PATHWAY 0 - Frequency: 6 (0.5602240896358543%)
+    subgraph cluster_0 {
+        label="";
+        style="rounded,filled";
+        fillcolor="#F5F5F5";
+        color="#BDBDBD";
+        penwidth=2.5;
+        fontname="Arial";
+        margin=15;
+        freq_0 [label="Freq: 6\n(0.56%)", shape=folder, style="filled", fillcolor="#E0E0E0", fontcolor="#424242", fontsize=16, penwidth=1.5];
+        v0_0 [label="Hospital\nAdmission", fillcolor="#D7E3FF", fontcolor="#212121", fontsize=14];
+        v0_1 [label="Book\nSurgery", fillcolor="#EAB3AE", fontcolor="#212121", fontsize=14];
+        v0_2 [label="Anesthesia\nStart", fillcolor="#E4D7FF", fontcolor="#212121", fontsize=14];
+        v0_3 [label="Room\nIN", fillcolor="#B2F0EA", fontcolor="#212121", fontsize=14];
+        v0_4 [label="Anesthesia\nReady", fillcolor="#EADFFF", fontcolor="#212121", fontsize=14];
+        v0_5 [label="Room\nOUT", fillcolor="#9BD5CF", fontcolor="#212121", fontsize=14];
+        v0_6 [label="PACU_ICU", fillcolor="#D6F5D6", fontcolor="#212121", fontsize=14];
+        v0_7 [label="Anesthesia\nStop", fillcolor="#D5C2FF", fontcolor="#212121", fontsize=14];
+        v0_8 [label="Discharge", fillcolor="#D7E3FF", fontcolor="#212121", fontsize=14];
+        freq_0 -> v0_0 [penwidth="0", arrowsize="0"];
+        v0_0 -> v0_1 [color="#BDBDBD"];
+        v0_1 -> v0_2 [color="#BDBDBD"];
+        v0_2 -> v0_3 [color="#BDBDBD"];
+        v0_3 -> v0_4 [color="#BDBDBD"];
+        v0_4 -> v0_5 [color="#BDBDBD"];
+        v0_5 -> v0_6 [color="#BDBDBD"];
+        v0_6 -> v0_7 [color="#BDBDBD"];
+        v0_7 -> v0_8 [color="#BDBDBD"];
+    }
+
+    // PATHWAY 1 - Frequency: 10 (0.9337068160597572%)
+    subgraph cluster_1 {
+        label="";
+        style="rounded,filled";
+        fillcolor="#F5F5F5";
+        color="#BDBDBD";
+        penwidth=2.5;
+        fontname="Arial";
+        margin=15;
+        freq_1 [label="Freq: 10\n(0.93%)", shape=folder, style="filled", fillcolor="#E0E0E0", fontcolor="#424242", fontsize=16, penwidth=1.5];
+        v1_0 [label="Hospital\nAdmission", fillcolor="#D7E3FF", fontcolor="#212121", fontsize=14];
+        v1_1 [label="Book\nSurgery", fillcolor="#EAB3AE", fontcolor="#212121", fontsize=14];
+        v1_2 [label="Cancel\nSurgery", fillcolor="#FFC7C2", fontcolor="#212121", fontsize=14];
+        v1_3 [label="Discharge", fillcolor="#D7E3FF", fontcolor="#212121", fontsize=14];
+        freq_1 -> v1_0 [penwidth="0", arrowsize="0"];
+        v1_0 -> v1_1 [color="#BDBDBD"];
+        v1_1 -> v1_2 [color="#BDBDBD"];
+        v1_2 -> v1_3 [color="#BDBDBD"];
+    }
+
+    // PATHWAY 2 - Frequency: 16 (1.4939309056956116%)
+    subgraph cluster_2 {
+        label="";
+        style="rounded,filled";
+        fillcolor="#F5F5F5";
+        color="#BDBDBD";
+        penwidth=2.5;
+        fontname="Arial";
+        margin=15;
+        freq_2 [label="Freq: 16\n(1.49%)", shape=folder, style="filled", fillcolor="#E0E0E0", fontcolor="#424242", fontsize=16, penwidth=1.5];
+        v2_0 [label="Hospital\nAdmission", fillcolor="#D7E3FF", fontcolor="#212121", fontsize=14];
+        v2_1 [label="Book\nSurgery", fillcolor="#EAB3AE", fontcolor="#212121", fontsize=14];
+        v2_2 [label="Room\nIN", fillcolor="#B2F0EA", fontcolor="#212121", fontsize=14];
+        v2_3 [label="Anesthesia\nStart", fillcolor="#E4D7FF", fontcolor="#212121", fontsize=14];
+        v2_4 [label="Anesthesia\nReady", fillcolor="#EADFFF", fontcolor="#212121", fontsize=14];
+        v2_5 [label="Room\nOUT", fillcolor="#9BD5CF", fontcolor="#212121", fontsize=14];
+        v2_6 [label="Anesthesia\nStop", fillcolor="#D5C2FF", fontcolor="#212121", fontsize=14];
+        v2_7 [label="Discharge", fillcolor="#D7E3FF", fontcolor="#212121", fontsize=14];
+        freq_2 -> v2_0 [penwidth="0", arrowsize="0"];
+        v2_0 -> v2_1 [color="#BDBDBD"];
+        v2_1 -> v2_2 [color="#BDBDBD"];
+        v2_2 -> v2_3 [color="#BDBDBD"];
+        v2_3 -> v2_4 [color="#BDBDBD"];
+        v2_4 -> v2_5 [color="#BDBDBD"];
+        v2_5 -> v2_6 [color="#BDBDBD"];
+        v2_6 -> v2_7 [color="#BDBDBD"];
+    }
+
+    // PATHWAY 3 - Frequency: 19 (1.7740429505135387%)
+    subgraph cluster_3 {
+        label="";
+        style="rounded,filled";
+        fillcolor="#F5F5F5";
+        color="#BDBDBD";
+        penwidth=2.5;
+        fontname="Arial";
+        margin=15;
+        freq_3 [label="Freq: 19\n(1.77%)", shape=folder, style="filled", fillcolor="#E0E0E0", fontcolor="#424242", fontsize=16, penwidth=1.5];
+        v3_0 [label="Hospital\nAdmission", fillcolor="#D7E3FF", fontcolor="#212121", fontsize=14];
+        v3_1 [label="Book\nSurgery", fillcolor="#EAB3AE", fontcolor="#212121", fontsize=14];
+        v3_2 [label="Cancel\nSurgery", fillcolor="#FFC7C2", fontcolor="#212121", fontsize=14];
+        v3_3 [label="Book\nSurgery", fillcolor="#EAB3AE", fontcolor="#212121", fontsize=14];
+        v3_4 [label="Room\nIN", fillcolor="#B2F0EA", fontcolor="#212121", fontsize=14];
+        v3_5 [label="Anesthesia\nStart", fillcolor="#E4D7FF", fontcolor="#212121", fontsize=14];
+        v3_6 [label="Room\nOUT", fillcolor="#9BD5CF", fontcolor="#212121", fontsize=14];
+        v3_7 [label="Anesthesia\nStop", fillcolor="#D5C2FF", fontcolor="#212121", fontsize=14];
+        v3_8 [label="Discharge", fillcolor="#D7E3FF", fontcolor="#212121", fontsize=14];
+        freq_3 -> v3_0 [penwidth="0", arrowsize="0"];
+        v3_0 -> v3_1 [color="#BDBDBD"];
+        v3_1 -> v3_2 [color="#BDBDBD"];
+        v3_2 -> v3_3 [color="#BDBDBD"];
+        v3_3 -> v3_4 [color="#BDBDBD"];
+        v3_4 -> v3_5 [color="#BDBDBD"];
+        v3_5 -> v3_6 [color="#BDBDBD"];
+        v3_6 -> v3_7 [color="#BDBDBD"];
+        v3_7 -> v3_8 [color="#BDBDBD"];
+    }
+
+    // PATHWAY 4 - Frequency: 23 (2.1475256769374416%)
+    subgraph cluster_4 {
+        label="";
+        style="rounded,filled";
+        fillcolor="#F5F5F5";
+        color="#BDBDBD";
+        penwidth=2.5;
+        fontname="Arial";
+        margin=15;
+        freq_4 [label="Freq: 23\n(2.15%)", shape=folder, style="filled", fillcolor="#E0E0E0", fontcolor="#424242", fontsize=16, penwidth=1.5];
+        v4_0 [label="Hospital\nAdmission", fillcolor="#D7E3FF", fontcolor="#212121", fontsize=14];
+        v4_1 [label="Book\nSurgery", fillcolor="#EAB3AE", fontcolor="#212121", fontsize=14];
+        v4_2 [label="Cancel\nSurgery", fillcolor="#FFC7C2", fontcolor="#212121", fontsize=14];
+        v4_3 [label="Book\nSurgery", fillcolor="#EAB3AE", fontcolor="#212121", fontsize=14];
+        v4_4 [label="Room\nIN", fillcolor="#B2F0EA", fontcolor="#212121", fontsize=14];
+        v4_5 [label="Anesthesia\nStart", fillcolor="#E4D7FF", fontcolor="#212121", fontsize=14];
+        v4_6 [label="Anesthesia\nReady", fillcolor="#EADFFF", fontcolor="#212121", fontsize=14];
+        v4_7 [label="Room\nOUT", fillcolor="#9BD5CF", fontcolor="#212121", fontsize=14];
+        v4_8 [label="Anesthesia\nStop", fillcolor="#D5C2FF", fontcolor="#212121", fontsize=14];
+        v4_9 [label="PACU_ICU", fillcolor="#D6F5D6", fontcolor="#212121", fontsize=14];
+        v4_10 [label="Discharge", fillcolor="#D7E3FF", fontcolor="#212121", fontsize=14];
+        freq_4 -> v4_0 [penwidth="0", arrowsize="0"];
+        v4_0 -> v4_1 [color="#BDBDBD"];
+        v4_1 -> v4_2 [color="#BDBDBD"];
+        v4_2 -> v4_3 [color="#BDBDBD"];
+        v4_3 -> v4_4 [color="#BDBDBD"];
+        v4_4 -> v4_5 [color="#BDBDBD"];
+        v4_5 -> v4_6 [color="#BDBDBD"];
+        v4_6 -> v4_7 [color="#BDBDBD"];
+        v4_7 -> v4_8 [color="#BDBDBD"];
+        v4_8 -> v4_9 [color="#BDBDBD"];
+        v4_9 -> v4_10 [color="#BDBDBD"];
+    }
+
+    // PATHWAY 5 - Frequency: 31 (2.8944911297852474%)
+    subgraph cluster_5 {
+        label="";
+        style="rounded,filled";
+        fillcolor="#F5F5F5";
+        color="#BDBDBD";
+        penwidth=2.5;
+        fontname="Arial";
+        margin=15;
+        freq_5 [label="Freq: 31\n(2.89%)", shape=folder, style="filled", fillcolor="#E0E0E0", fontcolor="#424242", fontsize=16, penwidth=1.5];
+        v5_0 [label="Hospital\nAdmission", fillcolor="#D7E3FF", fontcolor="#212121", fontsize=14];
+        v5_1 [label="Book\nSurgery", fillcolor="#EAB3AE", fontcolor="#212121", fontsize=14];
+        v5_2 [label="Anesthesia\nStart", fillcolor="#E4D7FF", fontcolor="#212121", fontsize=14];
+        v5_3 [label="Room\nIN", fillcolor="#B2F0EA", fontcolor="#212121", fontsize=14];
+        v5_4 [label="Room\nOUT", fillcolor="#9BD5CF", fontcolor="#212121", fontsize=14];
+        v5_5 [label="Anesthesia\nStop", fillcolor="#D5C2FF", fontcolor="#212121", fontsize=14];
+        v5_6 [label="Discharge", fillcolor="#D7E3FF", fontcolor="#212121", fontsize=14];
+        freq_5 -> v5_0 [penwidth="0", arrowsize="0"];
+        v5_0 -> v5_1 [color="#BDBDBD"];
+        v5_1 -> v5_2 [color="#BDBDBD"];
+        v5_2 -> v5_3 [color="#BDBDBD"];
+        v5_3 -> v5_4 [color="#BDBDBD"];
+        v5_4 -> v5_5 [color="#BDBDBD"];
+        v5_5 -> v5_6 [color="#BDBDBD"];
+    }
+
+    // PATHWAY 6 - Frequency: 50 (4.6685340802987865%)
+    subgraph cluster_6 {
+        label="";
+        style="rounded,filled";
+        fillcolor="#F5F5F5";
+        color="#BDBDBD";
+        penwidth=2.5;
+        fontname="Arial";
+        margin=15;
+        freq_6 [label="Freq: 50\n(4.67%)", shape=folder, style="filled", fillcolor="#E0E0E0", fontcolor="#424242", fontsize=16, penwidth=1.5];
+        v6_0 [label="Hospital\nAdmission", fillcolor="#D7E3FF", fontcolor="#212121", fontsize=14];
+        v6_1 [label="Book\nSurgery", fillcolor="#EAB3AE", fontcolor="#212121", fontsize=14];
+        v6_2 [label="Anesthesia\nStart", fillcolor="#E4D7FF", fontcolor="#212121", fontsize=14];
+        v6_3 [label="Room\nIN", fillcolor="#B2F0EA", fontcolor="#212121", fontsize=14];
+        v6_4 [label="Anesthesia\nReady", fillcolor="#EADFFF", fontcolor="#212121", fontsize=14];
+        v6_5 [label="Room\nOUT", fillcolor="#9BD5CF", fontcolor="#212121", fontsize=14];
+        v6_6 [label="Anesthesia\nStop", fillcolor="#D5C2FF", fontcolor="#212121", fontsize=14];
+        v6_7 [label="PACU_ICU", fillcolor="#D6F5D6", fontcolor="#212121", fontsize=14];
+        v6_8 [label="Discharge", fillcolor="#D7E3FF", fontcolor="#212121", fontsize=14];
+        freq_6 -> v6_0 [penwidth="0", arrowsize="0"];
+        v6_0 -> v6_1 [color="#BDBDBD"];
+        v6_1 -> v6_2 [color="#BDBDBD"];
+        v6_2 -> v6_3 [color="#BDBDBD"];
+        v6_3 -> v6_4 [color="#BDBDBD"];
+        v6_4 -> v6_5 [color="#BDBDBD"];
+        v6_5 -> v6_6 [color="#BDBDBD"];
+        v6_6 -> v6_7 [color="#BDBDBD"];
+        v6_7 -> v6_8 [color="#BDBDBD"];
+    }
+
+    // PATHWAY 7 - Frequency: 63 (5.88235294117647%)
+    subgraph cluster_7 {
+        label="";
+        style="rounded,filled";
+        fillcolor="#F5F5F5";
+        color="#BDBDBD";
+        penwidth=2.5;
+        fontname="Arial";
+        margin=15;
+        freq_7 [label="Freq: 63\n(5.88%)", shape=folder, style="filled", fillcolor="#E0E0E0", fontcolor="#424242", fontsize=16, penwidth=1.5];
+        v7_0 [label="Hospital\nAdmission", fillcolor="#D7E3FF", fontcolor="#212121", fontsize=14];
+        v7_1 [label="Book\nSurgery", fillcolor="#EAB3AE", fontcolor="#212121", fontsize=14];
+        v7_2 [label="Room\nIN", fillcolor="#B2F0EA", fontcolor="#212121", fontsize=14];
+        v7_3 [label="Anesthesia\nStart", fillcolor="#E4D7FF", fontcolor="#212121", fontsize=14];
+        v7_4 [label="Anesthesia\nReady", fillcolor="#EADFFF", fontcolor="#212121", fontsize=14];
+        v7_5 [label="Room\nOUT", fillcolor="#9BD5CF", fontcolor="#212121", fontsize=14];
+        v7_6 [label="PACU_ICU", fillcolor="#D6F5D6", fontcolor="#212121", fontsize=14];
+        v7_7 [label="Anesthesia\nStop", fillcolor="#D5C2FF", fontcolor="#212121", fontsize=14];
+        v7_8 [label="Discharge", fillcolor="#D7E3FF", fontcolor="#212121", fontsize=14];
+        freq_7 -> v7_0 [penwidth="0", arrowsize="0"];
+        v7_0 -> v7_1 [color="#BDBDBD"];
+        v7_1 -> v7_2 [color="#BDBDBD"];
+        v7_2 -> v7_3 [color="#BDBDBD"];
+        v7_3 -> v7_4 [color="#BDBDBD"];
+        v7_4 -> v7_5 [color="#BDBDBD"];
+        v7_5 -> v7_6 [color="#BDBDBD"];
+        v7_6 -> v7_7 [color="#BDBDBD"];
+        v7_7 -> v7_8 [color="#BDBDBD"];
+    }
+
+    // PATHWAY 8 - Frequency: 326 (30.438842203548084%)
+    subgraph cluster_8 {
+        label="";
+        style="rounded,filled";
+        fillcolor="#F5F5F5";
+        color="#BDBDBD";
+        penwidth=2.5;
+        fontname="Arial";
+        margin=15;
+        freq_8 [label="Freq: 326\n(30.44%)", shape=folder, style="filled", fillcolor="#E0E0E0", fontcolor="#424242", fontsize=16, penwidth=1.5];
+        v8_0 [label="Hospital\nAdmission", fillcolor="#D7E3FF", fontcolor="#212121", fontsize=14];
+        v8_1 [label="Book\nSurgery", fillcolor="#EAB3AE", fontcolor="#212121", fontsize=14];
+        v8_2 [label="Room\nIN", fillcolor="#B2F0EA", fontcolor="#212121", fontsize=14];
+        v8_3 [label="Anesthesia\nStart", fillcolor="#E4D7FF", fontcolor="#212121", fontsize=14];
+        v8_4 [label="Room\nOUT", fillcolor="#9BD5CF", fontcolor="#212121", fontsize=14];
+        v8_5 [label="Anesthesia\nStop", fillcolor="#D5C2FF", fontcolor="#212121", fontsize=14];
+        v8_6 [label="Discharge", fillcolor="#D7E3FF", fontcolor="#212121", fontsize=14];
+        freq_8 -> v8_0 [penwidth="0", arrowsize="0"];
+        v8_0 -> v8_1 [color="#BDBDBD"];
+        v8_1 -> v8_2 [color="#BDBDBD"];
+        v8_2 -> v8_3 [color="#BDBDBD"];
+        v8_3 -> v8_4 [color="#BDBDBD"];
+        v8_4 -> v8_5 [color="#BDBDBD"];
+        v8_5 -> v8_6 [color="#BDBDBD"];
+    }
+
+    // PATHWAY 9 - Frequency: 527 (49.2063492063492%)
+    subgraph cluster_9 {
+        label="";
+        style="rounded,filled";
+        fillcolor="#F5F5F5";
+        color="#BDBDBD";
+        penwidth=2.5;
+        fontname="Arial";
+        margin=15;
+        freq_9 [label="Freq: 527\n(49.21%)", shape=folder, style="filled", fillcolor="#E0E0E0", fontcolor="#424242", fontsize=16, penwidth=1.5];
+        v9_0 [label="Hospital\nAdmission", fillcolor="#D7E3FF", fontcolor="#212121", fontsize=14];
+        v9_1 [label="Book\nSurgery", fillcolor="#EAB3AE", fontcolor="#212121", fontsize=14];
+        v9_2 [label="Room\nIN", fillcolor="#B2F0EA", fontcolor="#212121", fontsize=14];
+        v9_3 [label="Anesthesia\nStart", fillcolor="#E4D7FF", fontcolor="#212121", fontsize=14];
+        v9_4 [label="Anesthesia\nReady", fillcolor="#EADFFF", fontcolor="#212121", fontsize=14];
+        v9_5 [label="Room\nOUT", fillcolor="#9BD5CF", fontcolor="#212121", fontsize=14];
+        v9_6 [label="Anesthesia\nStop", fillcolor="#D5C2FF", fontcolor="#212121", fontsize=14];
+        v9_7 [label="PACU_ICU", fillcolor="#D6F5D6", fontcolor="#212121", fontsize=14];
+        v9_8 [label="Discharge", fillcolor="#D7E3FF", fontcolor="#212121", fontsize=14];
+        freq_9 -> v9_0 [penwidth="0", arrowsize="0"];
+        v9_0 -> v9_1 [color="#BDBDBD"];
+        v9_1 -> v9_2 [color="#BDBDBD"];
+        v9_2 -> v9_3 [color="#BDBDBD"];
+        v9_3 -> v9_4 [color="#BDBDBD"];
+        v9_4 -> v9_5 [color="#BDBDBD"];
+        v9_5 -> v9_6 [color="#BDBDBD"];
+        v9_6 -> v9_7 [color="#BDBDBD"];
+        v9_7 -> v9_8 [color="#BDBDBD"];
+    }
+}

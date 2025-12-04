@@ -1,0 +1,111 @@
+digraph ElegantPathways {
+    // Modern graph settings
+    graph [
+        rankdir=LR,
+        splines=true,
+        ranksep=2.0,
+        nodesep=0.6,
+        bgcolor="white",
+        fontname="Segoe UI Symbol",
+        pad=0.0,
+        dpi=300
+    ];
+    
+    node [
+        style="filled,rounded",
+        width=1.5,
+        height=1.0,
+        shape=box,
+        penwidth=1.5,
+        margin=0.15
+    ];
+    
+    edge [
+        fontname="Segoe UI Symbol",
+        fontsize=50,
+        arrowsize=2.9,
+        labeldistance=1.5
+    ];
+    
+    // Main title
+    //labelloc="t";
+    //label=<<FONT POINT-SIZE="50"><B>Laparoscopic Cholecystectomy Pathway Comparison</B></FONT><BR/><FONT POINT-SIZE="40" COLOR="#424242">Ideal vs. Observed vs. High-Complexity Workflows</FONT>>;
+    
+    // PATHWAY C - ICU (BOTTOM)
+    subgraph cluster_icu {
+        label=<<FONT POINT-SIZE="30"><B>Panel C: ICU Pathway</B></FONT><BR/><FONT POINT-SIZE="25" COLOR="#C62828">■ Total: 38+ hours (critical care)</FONT>>;
+        style="rounded,filled";
+        fillcolor="#FFEBEE";
+        color="#EF5350";
+        penwidth=2.5;
+        fontname="Segoe UI Symbol";
+        margin=20;
+        
+        c1 [label="Hospital\nAdmission", fillcolor="#EF9A9A", fontcolor="#B71C1C", fontsize=28];
+        c2 [label="Book\nSurgery", fillcolor="#EF9A9A", fontcolor="#B71C1C", fontsize=28];
+        c3 [label="Room\nIN", fillcolor="#EF9A9A", fontcolor="#B71C1C", fontsize=28];
+        c4 [label="Anesthesia\nStart", fillcolor="#EF9A9A", fontcolor="#B71C1C", fontsize=28];
+        c5 [label="Room\nOUT", fillcolor="#EF9A9A", fontcolor="#B71C1C", fontsize=28];
+        c6 [label="ICU", fillcolor="#EF9A9A", fontcolor="#B71C1C", fontsize=28];
+        c7 [label="Discharge", fillcolor="#E57373", fontcolor="#FFFFFF", fontsize=28];
+        
+        c1 -> c2 [label="7.5h ⚠\ndelay", color="#C62828", penwidth=4, fontcolor="#B71C1C", fontsize=26];
+        c2 -> c3 [label="7.2h ⚠\nwait", color="#C62828", penwidth=4, fontcolor="#B71C1C", fontsize=26];
+        c3 -> c4 [label="0m ✓\neffic", color="#388E3C", penwidth=3, fontcolor="#1B5E20", fontsize=26];
+        c4 -> c5 [label="2.5h\ncomplex", color="#F57C00", penwidth=3, fontcolor="#E65100", fontsize=26];
+        c5 -> c6 [label="6m ✓\neffic", color="#388E3C", penwidth=3, fontcolor="#1B5E20", fontsize=26];
+        c6 -> c7 [label="24-48h ⚠\nICU", color="#C62828", penwidth=4, fontcolor="#B71C1C", fontsize=26];
+    }
+    
+    // PATHWAY B - OBSERVED (MIDDLE)
+    subgraph cluster_observed {
+        label=<<FONT POINT-SIZE="30"><B>Panel B: Observed Median</B></FONT><BR/><FONT POINT-SIZE="25" COLOR="#E65100">■ Total: 34 hours (overnight stay)</FONT>>;
+        style="rounded,filled";
+        fillcolor="#FFF8F3";
+        color="#FF9800";
+        penwidth=2.5;
+        fontname="Segoe UI Symbol";
+        margin=20;
+        
+        b1 [label="Hospital\nAdmission", fillcolor="#FFCC80", fontcolor="#BF360C", fontsize=28];
+        b2 [label="Book\nSurgery", fillcolor="#FFCC80", fontcolor="#BF360C", fontsize=28];
+        b3 [label="Room\nIN", fillcolor="#FFCC80", fontcolor="#BF360C", fontsize=28];
+        b4 [label="Anesthesia\nStart", fillcolor="#FFCC80", fontcolor="#BF360C", fontsize=28];
+        b5 [label="Room\nOUT", fillcolor="#FFCC80", fontcolor="#BF360C", fontsize=28];
+        b6 [label="PACU", fillcolor="#FFCC80", fontcolor="#BF360C", fontsize=28];
+        b7 [label="Discharge", fillcolor="#FB8C00", fontcolor="#FFFFFF", fontsize=28];
+        
+        b1 -> b2 [label="7.5h ⚠\ndelay", color="#C62828", penwidth=4, fontcolor="#B71C1C", fontsize=26];
+        b2 -> b3 [label="7.2h ⚠\nwait", color="#C62828", penwidth=4, fontcolor="#B71C1C", fontsize=26];
+        b3 -> b4 [label="0m ✓\neffic", color="#388E3C", penwidth=3, fontcolor="#1B5E20", fontsize=26];
+        b4 -> b5 [label="2.3h\nsurgery", color="#F57C00", penwidth=3, fontcolor="#E65100", fontsize=26];
+        b5 -> b6 [label="6m ✓\neffic", color="#388E3C", penwidth=3, fontcolor="#1B5E20", fontsize=26];
+        b6 -> b7 [label="19.5h ⚠\ndisch", color="#C62828", penwidth=4, fontcolor="#B71C1C", fontsize=26];
+    }
+    
+    // PATHWAY A - IDEAL (TOP)
+    subgraph cluster_ideal {
+        label=<<FONT POINT-SIZE="30"><B>Panel A: Ideal Pathway</B></FONT><BR/><FONT POINT-SIZE="25" COLOR="#1B5E20">■ Total: 6-8 hours (same-day discharge)</FONT>>;
+        style="rounded,filled";
+        fillcolor="#F1F8F4";
+        color="#4CAF50";
+        penwidth=2.5;
+        fontname="Segoe UI Symbol";
+        margin=20;
+        
+        a1 [label="Hospital\nAdmission", fillcolor="#A5D6A7", fontcolor="#1B5E20", fontsize=28];
+        a2 [label="Book\nSurgery", fillcolor="#A5D6A7", fontcolor="#1B5E20", fontsize=28];
+        a3 [label="Room\nIN", fillcolor="#A5D6A7", fontcolor="#1B5E20", fontsize=28];
+        a4 [label="Anesthesia\nStart", fillcolor="#A5D6A7", fontcolor="#1B5E20", fontsize=28];
+        a5 [label="Room\nOUT", fillcolor="#A5D6A7", fontcolor="#1B5E20", fontsize=28];
+        a6 [label="PACU", fillcolor="#A5D6A7", fontcolor="#1B5E20", fontsize=28];
+        a7 [label="Discharge", fillcolor="#66BB6A", fontcolor="#FFFFFF", fontsize=28];
+        
+        a1 -> a2 [label="0h\npre-sched", color="#388E3C", penwidth=4, fontcolor="#1B5E20", fontsize=26];
+        a2 -> a3 [label="2h\nprep", color="#388E3C", penwidth=4, fontcolor="#1B5E20", fontsize=26];
+        a3 -> a4 [label="0m\nimmed", color="#388E3C", penwidth=4, fontcolor="#1B5E20", fontsize=26];
+        a4 -> a5 [label="1.5h\nsurgery", color="#388E3C", penwidth=4, fontcolor="#1B5E20", fontsize=26];
+        a5 -> a6 [label="0m\nimmed", color="#388E3C", penwidth=4, fontcolor="#1B5E20", fontsize=26];
+        a6 -> a7 [label="3h\nrecovery", color="#388E3C", penwidth=4, fontcolor="#1B5E20", fontsize=26];
+    }
+}
